@@ -1,0 +1,22 @@
+// transpile to a pre-ES6 version of JS. Transpile is just a portmanteau of the words 'translate' and 'compile'.
+
+// {
+//     "compilerOptions": {
+//         "target": "ES2015",
+//         "watch": true,
+//         "module": "ES2015"
+//     }
+// }
+
+
+
+
+// transpile to a newer version of JS. 
+
+{
+    "compilerOptions": {
+        "target": "ES2020",
+        "watch": true,
+        "module": "ES2020"
+    }
+}
