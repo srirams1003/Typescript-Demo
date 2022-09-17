@@ -1,5 +1,23 @@
-console.log("Typescript Practice");
-export {};
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = __importDefault(require("express"));
+const dotenv_1 = __importDefault(require("dotenv"));
+dotenv_1.default.config();
+const app = (0, express_1.default)();
+const port = process.env.PORT;
+app.use(express_1.default.static("public"));
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/public/index.html');
+    // res.send('Express + Typescript!');
+});
+app.listen(port, () => {
+    console.log(`⚡️[server]: Server is running at https://localhost:${port}`);
+});
+// import { EmployeeClass } from './Modules/Employee.js'
+// console.log("Typescript Practice");
 // Keep Uncommenting out chunks code as you start from the top of this file. Once finished with a chunk, comment it out again and move on to the next one.
 // I left a lot of vertical space between two chunks in order to identify them.
 // // JS version compatibility

@@ -1,6 +1,9 @@
+"use strict";
 // Two ways to export a class:
 // 1. Have the export keyword in front of the class declaration and be done with it.
 // 2. Exclude the export keyword from in front of the class declaration and instead add a line at the end saying ' export { <name of class> } '
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EmployeeClass = void 0;
 // Way 1.
 // export class EmployeeClass {
 //         public name: string;
@@ -47,4 +50,4 @@ class EmployeeClass {
         console.log(`${this.name} is ${this.age} years old. Their gpa is/was ${this.gpa} and they are ${m_status}.`);
     }
 }
-export { EmployeeClass };
+exports.EmployeeClass = EmployeeClass;

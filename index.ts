@@ -1,7 +1,31 @@
-import { EmployeeClass } from './Modules/Employee.js'
+import express, { Express, Request, Response } from 'express';
+import dotenv from 'dotenv';
+
+dotenv.config();
+
+const app: Express = express();
+const port = process.env.PORT;
+
+app.use(express.static("public"));
+
+app.get('/', (req: Request, res: Response) => {
+
+    res.sendFile(__dirname + '/public/index.html');
+    // res.send('Express + Typescript!');
+});
+
+app.listen(port, () => {
+    console.log(`⚡️[server]: Server is running at https://localhost:${port}`);
+});
 
 
-console.log("Typescript Practice");
+
+
+
+
+// import { EmployeeClass } from './Modules/Employee.js'
+
+// console.log("Typescript Practice");
 
 
 // Keep Uncommenting out chunks code as you start from the top of this file. Once finished with a chunk, comment it out again and move on to the next one.
