@@ -33,10 +33,10 @@ Assuming here that you have executed the steps in the "Installation" phase above
 
 
 ### Relation between JS and Typescript
-![alt text](https://raw.githubusercontent.com/srirams1003/Typescript-Demo/master/typescript.png)
+![alt text](https://raw.githubusercontent.com/srirams1003/Typescript-Demo/master/public/typescript.png)
 
 
 ### Types vs Interfaces in Typescript
-![alt text](https://raw.githubusercontent.com/srirams1003/Typescript-Demo/master/typevsinterface.png)
+![alt text](https://raw.githubusercontent.com/srirams1003/Typescript-Demo/master/public/typevsinterface.png)
 
 
