@@ -168,6 +168,7 @@ class Person {
     readonly age: number;
     gpa: number;    // since the data modifier for this property is not specified, it is assumed to be public
     private marital_status: boolean;
+    test: string = "2";
 
     constructor(n : string, a : number, g : number, m : boolean){
         this.name = n;
@@ -190,6 +191,8 @@ class Person {
 
 
 let person1 = new Person("John", 28, 3.2, false);
+
+console.log("person1.test", person1.test)
 
 person1.print_details();
 
@@ -303,6 +306,7 @@ for (let i = 0; i < employees.length; i++){    // c++ way to iterate the array
 
 interface HasRadius {
     get_radius() : number;
+    diameter: number;
 
 }
 
@@ -316,13 +320,19 @@ class Square {
 
 class Circle implements HasRadius {  // cannot create this class without a get_radius() function that returns a number
     radius : number;
+    readonly diameter: number;
 
     constructor (r : number){
         this.radius = r;
+        this.diameter = r * 2;
     }
 
     get_radius(){
         return this.radius
+    }
+
+    get_diameter(){
+        return this.diameter
     }
 }
 
@@ -339,6 +349,12 @@ let equilateral_triangle1 = new Equilateral_Triangle(3);
 
 let circle1 : HasRadius = new Circle(7); // circle1 is defined to be a Circle object with type HasRadius
 let circle2 = new Circle(13); // circle2 is defined to be a Cicle object 
+
+console.log(circle2.get_diameter());
+console.log(circle2.diameter);
+// circle2.diameter = 2; // will throw error cuz readonly
+
+
 // let circle3 : HasRadius = new Square(5); 
 
 let shapes_with_radii : HasRadius[] = [];
@@ -358,6 +374,8 @@ console.log(circles);
 
 
 // the takeway from the above 10 lines of code is that you mostly use classes with interfaces to make an object stick to a criteria. Not usually to assign to a variable's type.
+
+
 
 
 

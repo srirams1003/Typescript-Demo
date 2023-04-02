@@ -57,6 +57,7 @@ console.log(david);
 // classes
 class Person {
     constructor(n, a, g, m) {
+        this.test = "2";
         this.name = n;
         this.age = a;
         this.gpa = g;
@@ -74,6 +75,7 @@ class Person {
     }
 }
 let person1 = new Person("John", 28, 3.2, false);
+console.log("person1.test", person1.test);
 person1.print_details();
 let person2 = new Person("Mary", 33, 3.8, true);
 person2.print_details();
@@ -128,9 +130,13 @@ class Square {
 class Circle {
     constructor(r) {
         this.radius = r;
+        this.diameter = r * 2;
     }
     get_radius() {
         return this.radius;
+    }
+    get_diameter() {
+        return this.diameter;
     }
 }
 class Equilateral_Triangle {
@@ -142,6 +148,9 @@ let square1 = new Square(4);
 let equilateral_triangle1 = new Equilateral_Triangle(3);
 let circle1 = new Circle(7); // circle1 is defined to be a Circle object with type HasRadius
 let circle2 = new Circle(13); // circle2 is defined to be a Cicle object 
+console.log(circle2.get_diameter());
+console.log(circle2.diameter);
+// circle2.diameter = 2; // will throw error cuz readonly
 // let circle3 : HasRadius = new Square(5); 
 let shapes_with_radii = [];
 // shapes_with_radii.push(square1); // throws error cuz square does not have a get_radius method
